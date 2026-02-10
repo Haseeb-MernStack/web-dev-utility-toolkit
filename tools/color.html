@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎨 Color Picker | Web Dev Utility Toolkit</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>🎨 Color Picker</h1>
+    <a href="../index.html" class="back-btn">⬅️ Back</a>
+  </header>
+
+  <main class="container">
+    <div class="color-picker-tool">
+      <input type="color" id="colorInput" value="#4f46e5" />
+      <div class="color-info">
+        <p>HEX: <span id="hexValue">#4f46e5</span> <button id="copyHex">Copy</button></p>
+        <p>RGB: <span id="rgbValue">79, 70, 229</span> <button id="copyRgb">Copy</button></p>
+      </div>
+
+      <h3>Palette Generator</h3>
+      <div class="palette" id="palette"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ using Vanilla JS</p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="color.js"></script>
+</body>
+</html>

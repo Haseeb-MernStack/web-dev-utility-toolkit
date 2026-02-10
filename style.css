@@ -1,88 +1,270 @@
-:root{
+:root {
     --bg: #fff;
     --text: #111;
     --card: #f3f3f3;
     --accent: #4f46e5;
 }
 
-.dark{
+.dark {
     --bg: #0f172a;
     --text: #e5e7eb;
     --card: #1e293b;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, sans-serif;
 }
 
-body{
+body {
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     border-bottom: 1px solid #ddd;
 }
 
-#themeToggle{
+#themeToggle {
     font-size: 1.2rem;
     cursor: pointer;
     background: none;
     border: none;
 }
 
-.container{
+.container {
     padding: 2rem;
     max-width: 1100px;
     margin: auto;
 }
 
-.subtitle{
+.subtitle {
     margin-bottom: 2rem;
     opacity: 0.8;
 }
 
-.tools-grid{
+.tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
-.tool-card{
+.tool-card {
     background: var(--card);
     padding: 1.5rem;
     border-radius: 12px;
     transition: transform 0.2s ease;
 }
 
-.tool-card:hover{
+.tool-card:hover {
     transform: translate(-5px);
 }
 
-.tool-card h2{
+.tool-card h2 {
     margin-bottom: 0.5rem;
 }
 
-.tool-card button{
+.tool-card button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 6px;
     background: var(--accent);
     color: white;
-    cursor: not-allowed;
-    opacity: 0.7;
+    cursor: pointer;
+    opacity: 1;
+    /* fully visible */
+    transition: transform 0.2s, background 0.2s;
 }
 
-footer{
+#disabled{
+    cursor: not-allowed;
+}
+
+.tool-card button:hover {
+    transform: translateY(-3px);
+    background: #6366f1;
+    /* slightly lighter accent on hover */
+}
+
+footer {
     text-align: center;
     padding: 1.5rem;
     opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Starting - Color Picker Tool - CSS */
+
+.color-picker-tool {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.color-picker-tool input[type="color"] {
+    width: 100%;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.color-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-info button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.palette {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.palette-color {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: transform 0.2s;
+}
+
+.palette-color:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* Starting - Text Formatter Tool - CSS */
+
+.text-tool {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text-tool textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-group button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 120px;
+    transition: transform 0.2s;
+}
+
+.btn-group button:hover {
+    transform: scale(1.05);
+}
+
+.text-stats {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* Starting - Password Generator Tool - CSS */
+
+.password-tool {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.password-tool input[type="range"] {
+    width: 100%;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.result {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.result input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.result button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
