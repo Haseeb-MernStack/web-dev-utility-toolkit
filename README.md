@@ -1,12 +1,27 @@
-## ⭐ Why this project?
-- 100% Vanilla JavaScript
+# 🧰 Web Dev Utility Toolkit
+
+A collection of daily-use web tools built with **pure HTML, CSS, and JavaScript**.  
+No frameworks. No dependencies. Just clean and useful tools.
+
+## 🚀 Tools (v1)
+
+- 🎨 Color Picker (coming soon)
+- 🔤 Text Formatter (coming soon)
+- 🔐 Password Generator (coming soon)
+
+## ✨ Features
+
+- Vanilla JavaScript only
+- Clean & minimal UI
+- Dark mode support
 - Beginner friendly
-- No frameworks, no libraries
-- Useful for developers & students
-- Easy to extend with new tools
+- Easy to extend
 
-## 🤝 Contribute
-Feel free to add new tools or improve UI.
-PRs are welcome 💙
+## 🤝 Contributing
 
-If you like this project, don’t forget to ⭐ the repo!
+Want to add a new tool or improve UI?  
+Feel free to open a PR.
+
+## ⭐ Support
+
+If you find this project useful, don’t forget to **star the repo** ⭐
